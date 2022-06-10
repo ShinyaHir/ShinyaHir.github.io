@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;500&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #d27ae8;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol {
+  list-style-type: none;
+  display: flex;
+
+  font-family: Helvetica, sans-serif;
+}
+
+
+#nav {
+  z-index: 1;
+
+  position: sticky;
+  top: 0;
+  transition: top 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  min-width: 100%;
+  min-height: 104px;
+
+  background-image: url("assets/clips-sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon {
+  background-color: #cf78e5;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+  border: 1px solid black;
+  
+  position: relative;
+  top: 5px;
+}
+
+.nav-links {
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+
+  width: 130px;
+  height: 48px;
+  border: 1px solid black;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.nav-links:hover {
+  background-color: #fa793b;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+#home-nav {
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  color: #2d2d2d;
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    #8c8c8c7f 0px 4px 0px, #787878 0px 0px 0px, #0000007f 0px 5px 10px;
+  letter-spacing: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+
+  margin-right: auto;
+  display: flex;
+  position: relative;
+  left: 4%;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  color: #2d2d2d;
+  max-width: 45%;
+  position: relative;
+  padding-left: 4%;
+}
+
+.small {
+  font-size: 24px;
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.large {
+  font-size: 40px;
+  line-height: 1.3em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+#avatar {
+  width: 294px;
+  height: 336px;
+  position: relative;
+  left: 25%;
+}
+
+.header {
+  margin: 0;
+  padding: 70px 1%;
+  font-family: Helvetica, sans-serif;
+}
+
+#clips-header {
+  min-width: 100%;
+  min-height: 168px;
+
+  background-image: url("assets/clips-sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-size: 32px;
+  letter-spacing: 0.1em;
+  color: #2d2d2d;
+  text-shadow: #c8c8c8 1px 1px 0px, #b4b4b4 0px 2px 0px, #a0a0a0 0px 3px 0px,
+    #8c8c8c7f 0px 4px 0px, #787878 0px 0px 0px, #0000007f 0px 5px 10px;
+}
+
+#about {
+  color: #2d2d2d;
+  text-align: center;
+  margin: 10% auto;
+}
+
+.about {
+  font-family: Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+p.large {
+  font-size: 48px;
+  margin: 0;
+}
+
+.wrapper {
+  display: inline-flex;
+  padding: 50px;
+  z-index: 1;
+}
+
+.wrapper .icon {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding: 15px;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.tooltip {
+  font-family: Helvetica, sans-serif;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background-color: #ffffff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+  background-color: #de2ee4;
+  color: #ffffff;
+}
+
+.wrapper .discord:hover,
+.wrapper .discord:hover .tooltip,
+.wrapper .discord:hover .tooltip::before {
+  background-color: #de2ee4;
+  color: #ffffff;
+  fill: #e0e0e0;
+}
+
+.discord:hover g {
+  fill: #e0e0e0;
+}
+.github:hover:hover g {
+  fill: #e0e0e0;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  margin: 150px;
+}
+
+#copyright {
+  text-align: center;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  color: #2d2d2d;
+}
+
+hr {
+  width: 92%;
+  color: #2d2d2d;
+  background-color: #2d2d2d;
+  border: none;
+  height: 1px;
+}
