@@ -166,6 +166,10 @@ p.large {
   margin: 0;
 }
 
+span.large {
+  margin-bottom: 10%;
+}
+
 .wrapper {
   display: inline-flex;
   padding: 50px;
